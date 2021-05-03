@@ -1,0 +1,54 @@
+.wholePage {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(23, 245, 53);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Bebas Neue', cursive;
+}
+
+header, footer {
+    height: 100px;
+    width: 90%;
+    background-color: rgb(37, 35, 35);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    color: rgb(255, 230, 5);
+    border-radius: 25px;
+    
+}
+
+header {
+    font-size: 6em;
+}
+
+footer {
+    font-size: 3em;
+}
+
+.newOrder {
+    height: 40%;
+    width: 20%;
+    background-color: rgb(37, 35, 35);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 10px;
+
+    color: rgb(255, 230, 5);
+    border-radius: 25px;
+    font-size: 2em;
+}
