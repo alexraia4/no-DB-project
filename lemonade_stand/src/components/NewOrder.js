@@ -16,6 +16,7 @@ export default class NewOrder extends Component {
         this.createOrder = this.createOrder.bind(this);
     }
 
+
     createOrder() {
 
             let newOrder = {
@@ -25,11 +26,9 @@ export default class NewOrder extends Component {
                 amount: this.state.amount
             }
 
-            let jabba = JSON.stringify(newOrder);
+            
 
-            //axios.post('http://localhost:4003/api/orders', jabba);
-
-            console.log(jabba);
+            axios.post('/api/orders', newOrder).then(res => console.log(res.data));
     }
 
 

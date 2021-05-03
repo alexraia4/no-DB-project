@@ -1,12 +1,13 @@
 const express = require('express');
 const lc = require("./lemonade_controller");
+const cors = require('cors');
 
 const app = express();
 const PORT = 4003;
 
 app.use(express.json());
+app.use(cors());
 
-app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
 
 
 
@@ -20,3 +21,4 @@ app.put('/api/orders/beingProcessed/:id', lc.beingProcessed);
 app.put('/api/orders/readyForPickup/:id', lc.readyForPickup);
 app.put('/api/orders/complete/:id', lc.complete);
 
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));

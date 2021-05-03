@@ -37,6 +37,7 @@ module.exports = {
         const {name, ccc, orderZ, amount} = req.body;
         const newOrder = new Order(name, ccc, orderZ, amount);
         orders.push(newOrder);
+        console.log("anything");
         res.status(200).send("Order Added");
     },
 
