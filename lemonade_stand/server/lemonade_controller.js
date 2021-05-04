@@ -37,13 +37,13 @@ module.exports = {
         const {name, ccc, orderZ, amount} = req.body;
         const newOrder = new Order(name, ccc, orderZ, amount);
         orders.push(newOrder);
-        res.status(200).send("Order Added");
+        res.status(200).send(orders);
     },
 
     deleteOrder: (req, res) => {
         const {id} = req.params;
         orders = orders.filter(element => element.id !== +id)
-        res.status(200).send("Order Deleted");
+        res.status(200).send(orders);
     },
 
     editOrder: (req, res) => {
@@ -62,7 +62,7 @@ module.exports = {
                 orders.splice(index, 1, newOrder);
             }
         });        
-        res.status(200).send('Order Edited');
+        res.status(200).send(orders);
 
     },
 
@@ -83,7 +83,7 @@ module.exports = {
                 element.status = "Being Processed"
             }
         });
-        res.status(200).send('Order Status Changed to "Being Processed"');
+        res.status(200).send(orders);
     },
 
     readyForPickup: (req, res) => {
@@ -93,7 +93,7 @@ module.exports = {
                 element.status = "Ready For Pickup"
             }
         });
-        res.status(200).send('Order Status Changed to "Ready For Pickup"');
+        res.status(200).send(orders);
     },
 
     complete: (req, res) => {
@@ -103,6 +103,6 @@ module.exports = {
                 element.status = "Complete"
             }
         });
-        res.status(200).send('Order Status Changed to "Complete"');
+        res.status(200).send(orders);
     }
 }

@@ -28,7 +28,7 @@ export default class NewOrder extends Component {
 
             
 
-            axios.post('/api/orders', newOrder).then(res => console.log(res.data));
+            axios.post('/api/orders', newOrder).then(res => this.props.setDisplay("home"));
     }
 
 
@@ -50,7 +50,7 @@ export default class NewOrder extends Component {
                 <p>Amount:</p>
                 <input type="text" onChange={ ( e ) => this.setState({ amount: e.target.value }) }/>
                 <br/>
-                <button onClick = {this.createOrder}>Submit</button>
+                <button className="submitButton" onClick = {this.createOrder}>Submit</button>
             </div>
         )
     }

@@ -22,3 +22,4 @@ app.put('/api/orders/readyForPickup/:id', lc.readyForPickup);
 app.put('/api/orders/complete/:id', lc.complete);
 
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
+

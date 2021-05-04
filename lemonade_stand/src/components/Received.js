@@ -28,7 +28,7 @@ export default class Received extends Component {
 
 
     changeToBeingProcessed(id) {
-        axios.put(`http://localhost:4003/api/orders/beingProcessed/${id}`).then(console.log(this.state.orders)).catch(err => console.log(err));
+        axios.put(`http://localhost:4003/api/orders/beingProcessed/${id}`).then(res => this.setState({orders: res.data.filter(element => element.status === "Received")})).catch(err => console.log(err));
     }
 
 }

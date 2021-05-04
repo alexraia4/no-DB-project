@@ -19,7 +19,7 @@ export default class AllOrders extends Component {
     render() {
         
         return (
-            this.state.orders.map(order => <AllOrdersCard key={order.id} id={order.id} name={order.name} ccc={order.ccc} orderZ={order.orderZ} amount={order.amount} date={order.date} time={order.time} status={order.status}/>)
+            this.state.orders.map(order => <AllOrdersCard key={order.id} id={order.id} name={order.name} ccc={order.ccc} orderZ={order.orderZ} amount={order.amount} date={order.date} time={order.time} status={order.status} setDisplay={this.props.setDisplay}/>)
         );
     }
 
